@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		82B0E8F725AA3E8600B4EFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E8F625AA3E8600B4EFBC /* AppDelegate.swift */; };
 		82B0E8F925AA3E8600B4EFBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E8F825AA3E8600B4EFBC /* SceneDelegate.swift */; };
-		82B0E8FB25AA3E8600B4EFBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E8FA25AA3E8600B4EFBC /* ViewController.swift */; };
 		82B0E8FE25AA3E8600B4EFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B0E8FC25AA3E8600B4EFBC /* Main.storyboard */; };
 		82B0E90025AA3E8800B4EFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B0E8FF25AA3E8800B4EFBC /* Assets.xcassets */; };
 		82B0E90325AA3E8800B4EFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B0E90125AA3E8800B4EFBC /* LaunchScreen.storyboard */; };
 		82B0E90E25AA3E8900B4EFBC /* UIGesturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E90D25AA3E8900B4EFBC /* UIGesturesTests.swift */; };
 		82B0E91925AA3E8900B4EFBC /* UIGesturesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E91825AA3E8900B4EFBC /* UIGesturesUITests.swift */; };
+		82B0E93225AA3EF600B4EFBC /* PanGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E93125AA3EF600B4EFBC /* PanGestureViewController.swift */; };
+		82B0E93725AA3F1100B4EFBC /* TapGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E93625AA3F1100B4EFBC /* TapGestureViewController.swift */; };
+		82B0E94C25AA525000B4EFBC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E94B25AA525000B4EFBC /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		82B0E8F325AA3E8600B4EFBC /* UIGestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIGestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B0E8F625AA3E8600B4EFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B0E8F825AA3E8600B4EFBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		82B0E8FA25AA3E8600B4EFBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82B0E8FD25AA3E8600B4EFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82B0E8FF25AA3E8800B4EFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82B0E90225AA3E8800B4EFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		82B0E91425AA3E8900B4EFBC /* UIGesturesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIGesturesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B0E91825AA3E8900B4EFBC /* UIGesturesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGesturesUITests.swift; sourceTree = "<group>"; };
 		82B0E91A25AA3E8900B4EFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82B0E93125AA3EF600B4EFBC /* PanGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGestureViewController.swift; sourceTree = "<group>"; };
+		82B0E93625AA3F1100B4EFBC /* TapGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureViewController.swift; sourceTree = "<group>"; };
+		82B0E94B25AA525000B4EFBC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,10 @@
 		82B0E8F525AA3E8600B4EFBC /* UIGestures */ = {
 			isa = PBXGroup;
 			children = (
-				82B0E8F625AA3E8600B4EFBC /* AppDelegate.swift */,
-				82B0E8F825AA3E8600B4EFBC /* SceneDelegate.swift */,
-				82B0E8FA25AA3E8600B4EFBC /* ViewController.swift */,
+				82B0E93F25AA402500B4EFBC /* Application */,
+				82B0E93B25AA3F6D00B4EFBC /* Classes */,
+				82B0E92925AA3E9E00B4EFBC /* Controllers */,
 				82B0E8FC25AA3E8600B4EFBC /* Main.storyboard */,
-				82B0E8FF25AA3E8800B4EFBC /* Assets.xcassets */,
-				82B0E90125AA3E8800B4EFBC /* LaunchScreen.storyboard */,
 				82B0E90425AA3E8800B4EFBC /* Info.plist */,
 			);
 			path = UIGestures;
@@ -126,6 +128,42 @@
 				82B0E91A25AA3E8900B4EFBC /* Info.plist */,
 			);
 			path = UIGesturesUITests;
+			sourceTree = "<group>";
+		};
+		82B0E92925AA3E9E00B4EFBC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				82B0E93125AA3EF600B4EFBC /* PanGestureViewController.swift */,
+				82B0E93625AA3F1100B4EFBC /* TapGestureViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		82B0E93B25AA3F6D00B4EFBC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				82B0E94B25AA525000B4EFBC /* Extensions.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		82B0E93F25AA402500B4EFBC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				82B0E94025AA406100B4EFBC /* Files */,
+				82B0E8F625AA3E8600B4EFBC /* AppDelegate.swift */,
+				82B0E8F825AA3E8600B4EFBC /* SceneDelegate.swift */,
+				82B0E8FF25AA3E8800B4EFBC /* Assets.xcassets */,
+				82B0E90125AA3E8800B4EFBC /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		82B0E94025AA406100B4EFBC /* Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82B0E8FB25AA3E8600B4EFBC /* ViewController.swift in Sources */,
+				82B0E94C25AA525000B4EFBC /* Extensions.swift in Sources */,
+				82B0E93725AA3F1100B4EFBC /* TapGestureViewController.swift in Sources */,
 				82B0E8F725AA3E8600B4EFBC /* AppDelegate.swift in Sources */,
+				82B0E93225AA3EF600B4EFBC /* PanGestureViewController.swift in Sources */,
 				82B0E8F925AA3E8600B4EFBC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

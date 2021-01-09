@@ -1,24 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iEb-wD-YFo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--PanGesture-->
+        <scene sceneID="mIQ-cf-VQO">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="PanGestureView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mmq-Dk-s5z" customClass="PanGestureViewController" customModule="UIGestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aX2-oU-qf3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pan Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC6-iP-n3D">
+                                <rect key="frame" x="138.5" y="74" width="137.5" height="36"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMb-4z-VLb" userLabel="Drag View">
+                                <rect key="frame" x="82" y="348" width="250" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mv1-uI-TUR">
+                                        <rect key="frame" x="87" y="85.5" width="76.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                        <color key="textColor" name="Theme-Background"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Mv1-uI-TUR" firstAttribute="centerX" secondItem="bMb-4z-VLb" secondAttribute="centerX" id="H3d-Nb-s8x"/>
+                                    <constraint firstAttribute="height" constant="200" id="Z0J-oH-i5e"/>
+                                    <constraint firstItem="Mv1-uI-TUR" firstAttribute="centerY" secondItem="bMb-4z-VLb" secondAttribute="centerY" id="moy-fU-Mt1"/>
+                                    <constraint firstAttribute="width" constant="250" id="ww1-jg-Pg6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Re0-xa-Lz3"/>
+                        <color key="backgroundColor" name="Theme-Background"/>
+                        <constraints>
+                            <constraint firstItem="bMb-4z-VLb" firstAttribute="centerY" secondItem="aX2-oU-qf3" secondAttribute="centerY" id="BdU-Ii-4eu"/>
+                            <constraint firstItem="bMb-4z-VLb" firstAttribute="centerX" secondItem="aX2-oU-qf3" secondAttribute="centerX" id="URx-YU-w3d"/>
+                            <constraint firstItem="OC6-iP-n3D" firstAttribute="top" secondItem="Re0-xa-Lz3" secondAttribute="top" constant="30" id="WXz-v8-eE6"/>
+                            <constraint firstItem="OC6-iP-n3D" firstAttribute="centerX" secondItem="aX2-oU-qf3" secondAttribute="centerX" id="Ym2-L6-q44"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="PanGesture" image="Pan" id="SN8-tq-nIp"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szl-Dk-nOx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-274" y="-246"/>
+        </scene>
+        <!--TapGesture-->
+        <scene sceneID="ZZy-9P-oIJ">
+            <objects>
+                <viewController storyboardIdentifier="TapGestureView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NTt-Jy-0DK" customClass="TapGestureViewController" customModule="UIGestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H28-As-ESx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ie-Fe-6Ta">
+                                <rect key="frame" x="138.5" y="74" width="137" height="36"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuA-Y4-oH0">
+                                <rect key="frame" x="82" y="490" width="250" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9O4-qA-caf">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                        <state key="normal" title="Show modal">
+                                            <color key="titleColor" name="Theme-Green"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openModal:" destination="NTt-Jy-0DK" eventType="touchUpInside" id="iJd-MS-XyT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6FC-bM-Se2"/>
+                                    <constraint firstItem="9O4-qA-caf" firstAttribute="top" secondItem="fuA-Y4-oH0" secondAttribute="top" id="hdA-IS-l9r"/>
+                                    <constraint firstAttribute="bottom" secondItem="9O4-qA-caf" secondAttribute="bottom" id="pZO-rE-YZM"/>
+                                    <constraint firstAttribute="trailing" secondItem="9O4-qA-caf" secondAttribute="trailing" id="zDp-xk-dn2"/>
+                                    <constraint firstItem="9O4-qA-caf" firstAttribute="leading" secondItem="fuA-Y4-oH0" secondAttribute="leading" id="zge-qJ-feD"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihg-A7-qBZ" userLabel="TapView">
+                                <rect key="frame" x="82" y="210" width="250" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqz-vW-5cu">
+                                        <rect key="frame" x="92.5" y="110.5" width="65.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                        <color key="textColor" name="Theme-Background"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qqz-vW-5cu" firstAttribute="centerY" secondItem="Ihg-A7-qBZ" secondAttribute="centerY" id="Ql7-aV-7d8"/>
+                                    <constraint firstAttribute="height" constant="250" id="cp9-oY-Fkh"/>
+                                    <constraint firstItem="qqz-vW-5cu" firstAttribute="centerX" secondItem="Ihg-A7-qBZ" secondAttribute="centerX" id="doM-s1-Ubf"/>
+                                    <constraint firstAttribute="width" constant="250" id="sOk-yc-6gg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HT6-F5-9Tj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4d-NX-rAx">
+                                <rect key="frame" x="0.0" y="813" width="414" height="0.0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MX-v9-fOT">
+                                        <rect key="frame" x="30" y="30" width="354" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3n1-2h-S85"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                        <state key="normal" title="Close modal">
+                                            <color key="titleColor" name="Theme-Background"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="closeModal:" destination="NTt-Jy-0DK" eventType="touchUpInside" id="TAI-gk-dNd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Theme-SecondBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="GVj-NI-Fma"/>
+                                    <constraint firstItem="5MX-v9-fOT" firstAttribute="top" secondItem="R4d-NX-rAx" secondAttribute="top" constant="30" id="e45-5Z-13Y"/>
+                                    <constraint firstItem="5MX-v9-fOT" firstAttribute="left" secondItem="R4d-NX-rAx" secondAttribute="left" constant="30" id="mg7-MV-1UZ"/>
+                                    <constraint firstAttribute="right" secondItem="5MX-v9-fOT" secondAttribute="right" constant="30" id="sYZ-HL-lDX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NcD-I5-j0z"/>
+                        <color key="backgroundColor" name="Theme-Background"/>
+                        <constraints>
+                            <constraint firstItem="R4d-NX-rAx" firstAttribute="leading" secondItem="NcD-I5-j0z" secondAttribute="leading" id="6XH-zC-QR2"/>
+                            <constraint firstItem="HT6-F5-9Tj" firstAttribute="leading" secondItem="NcD-I5-j0z" secondAttribute="leading" id="7rP-Q2-kF6"/>
+                            <constraint firstAttribute="top" secondItem="HT6-F5-9Tj" secondAttribute="top" id="9np-7w-Ux7"/>
+                            <constraint firstItem="Ihg-A7-qBZ" firstAttribute="top" secondItem="1Ie-Fe-6Ta" secondAttribute="bottom" constant="100" id="Byy-S9-KgJ"/>
+                            <constraint firstItem="fuA-Y4-oH0" firstAttribute="width" secondItem="Ihg-A7-qBZ" secondAttribute="width" id="CFm-5e-Za5"/>
+                            <constraint firstItem="fuA-Y4-oH0" firstAttribute="centerX" secondItem="H28-As-ESx" secondAttribute="centerX" id="G2V-T1-Gdd"/>
+                            <constraint firstItem="NcD-I5-j0z" firstAttribute="trailing" secondItem="HT6-F5-9Tj" secondAttribute="trailing" id="I24-fm-h5E"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="R4d-NX-rAx" secondAttribute="bottom" id="Qni-Cd-7PX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="HT6-F5-9Tj" secondAttribute="bottom" id="Rle-Ux-tDa"/>
+                            <constraint firstItem="1Ie-Fe-6Ta" firstAttribute="top" secondItem="NcD-I5-j0z" secondAttribute="top" constant="30" id="Tca-ZI-wSJ"/>
+                            <constraint firstItem="fuA-Y4-oH0" firstAttribute="top" secondItem="Ihg-A7-qBZ" secondAttribute="bottom" constant="30" id="UoS-Nj-tuv"/>
+                            <constraint firstItem="NcD-I5-j0z" firstAttribute="trailing" secondItem="R4d-NX-rAx" secondAttribute="trailing" id="WIp-xO-DAc"/>
+                            <constraint firstItem="Ihg-A7-qBZ" firstAttribute="centerX" secondItem="H28-As-ESx" secondAttribute="centerX" id="Zt1-yb-215"/>
+                            <constraint firstItem="1Ie-Fe-6Ta" firstAttribute="centerX" secondItem="H28-As-ESx" secondAttribute="centerX" id="bhG-Mz-VHM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TapGesture" image="Tap" id="k5Q-VN-Ivr"/>
+                    <connections>
+                        <outlet property="lblTapMe" destination="qqz-vW-5cu" id="fvO-yv-dAW"/>
+                        <outlet property="vwModal" destination="R4d-NX-rAx" id="HoM-tb-b7a"/>
+                        <outlet property="vwModalHeightConstraint" destination="GVj-NI-Fma" id="lfD-xk-XVA"/>
+                        <outlet property="vwModalOverlay" destination="HT6-F5-9Tj" id="oUq-wh-kbU"/>
+                        <outlet property="vwShowModal" destination="fuA-Y4-oH0" id="GEq-hY-uUy"/>
+                        <outlet property="vwTapMe" destination="Ihg-A7-qBZ" id="c52-zb-SfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yac-Lw-GyT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1058" y="-246"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="s4Y-QH-a6O">
+            <objects>
+                <tabBarController id="iEb-wD-YFo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v3j-Uk-JeU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="Theme-Background"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="Theme-Background"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NTt-Jy-0DK" kind="relationship" relationship="viewControllers" id="cPA-Sy-O64"/>
+                        <segue destination="mmq-Dk-s5z" kind="relationship" relationship="viewControllers" id="F7n-7z-pUD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxG-0r-t5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-728" y="-960"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pan" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="Tap" width="21.333333969116211" height="21.333333969116211"/>
+        <namedColor name="Theme-Background">
+            <color red="0.10980392156862745" green="0.12549019607843137" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Theme-Green">
+            <color red="0.30980392156862746" green="0.71372549019607845" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Theme-SecondBackground">
+            <color red="0.14117647058823529" green="0.15686274509803921" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
