@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82A4722625AB554400A9AA34 /* SwipeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A4722525AB554400A9AA34 /* SwipeGestureViewController.swift */; };
 		82B0E8F725AA3E8600B4EFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E8F625AA3E8600B4EFBC /* AppDelegate.swift */; };
 		82B0E8F925AA3E8600B4EFBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E8F825AA3E8600B4EFBC /* SceneDelegate.swift */; };
 		82B0E8FE25AA3E8600B4EFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B0E8FC25AA3E8600B4EFBC /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82A4722525AB554400A9AA34 /* SwipeGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeGestureViewController.swift; sourceTree = "<group>"; };
 		82B0E8F325AA3E8600B4EFBC /* UIGestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIGestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B0E8F625AA3E8600B4EFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B0E8F825AA3E8600B4EFBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				82B0E93125AA3EF600B4EFBC /* PanGestureViewController.swift */,
 				82B0E93625AA3F1100B4EFBC /* TapGestureViewController.swift */,
+				82A4722525AB554400A9AA34 /* SwipeGestureViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A4722625AB554400A9AA34 /* SwipeGestureViewController.swift in Sources */,
 				82B0E94C25AA525000B4EFBC /* Extensions.swift in Sources */,
 				82B0E93725AA3F1100B4EFBC /* TapGestureViewController.swift in Sources */,
 				82B0E8F725AA3E8600B4EFBC /* AppDelegate.swift in Sources */,

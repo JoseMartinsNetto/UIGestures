@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pan Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC6-iP-n3D">
-                                <rect key="frame" x="138.5" y="74" width="137.5" height="36"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pan-Image" translatesAutoresizingMaskIntoConstraints="NO" id="vFm-Fd-M5Y">
+                                <rect key="frame" x="137" y="141" width="140" height="140"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Pzb-zs-QHv"/>
+                                    <constraint firstAttribute="height" constant="140" id="iNy-6Q-4fz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pan Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9h-3f-Vpx">
+                                <rect key="frame" x="138.5" y="74" width="137.5" height="35.5"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUg-Po-DPf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="upM-Na-tX3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="backgroundColor" name="Theme-Background"/>
+                                <blurEffect style="systemChromeMaterialDark"/>
+                            </visualEffectView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMb-4z-VLb" userLabel="Drag View">
                                 <rect key="frame" x="82" y="323" width="250" height="250"/>
                                 <subviews>
@@ -34,9 +52,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Mv1-uI-TUR" firstAttribute="centerY" secondItem="bMb-4z-VLb" secondAttribute="centerY" id="9GK-GH-Xgs"/>
                                     <constraint firstItem="Mv1-uI-TUR" firstAttribute="centerX" secondItem="bMb-4z-VLb" secondAttribute="centerX" id="H3d-Nb-s8x"/>
                                     <constraint firstAttribute="height" constant="250" id="Z0J-oH-i5e"/>
-                                    <constraint firstItem="Mv1-uI-TUR" firstAttribute="centerY" secondItem="bMb-4z-VLb" secondAttribute="centerY" id="moy-fU-Mt1"/>
                                     <constraint firstAttribute="width" constant="250" id="ww1-jg-Pg6"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -49,17 +67,150 @@
                         <viewLayoutGuide key="safeArea" id="Re0-xa-Lz3"/>
                         <color key="backgroundColor" name="Theme-Background"/>
                         <constraints>
-                            <constraint firstItem="bMb-4z-VLb" firstAttribute="centerY" secondItem="aX2-oU-qf3" secondAttribute="centerY" id="BdU-Ii-4eu"/>
+                            <constraint firstItem="VUg-Po-DPf" firstAttribute="leading" secondItem="Re0-xa-Lz3" secondAttribute="leading" id="Db7-26-bpf"/>
+                            <constraint firstItem="P9h-3f-Vpx" firstAttribute="centerX" secondItem="aX2-oU-qf3" secondAttribute="centerX" id="ECx-tI-g6l"/>
+                            <constraint firstItem="vFm-Fd-M5Y" firstAttribute="top" secondItem="P9h-3f-Vpx" secondAttribute="bottom" constant="31.5" id="I69-J2-kuh"/>
+                            <constraint firstItem="P9h-3f-Vpx" firstAttribute="top" secondItem="Re0-xa-Lz3" secondAttribute="top" constant="30" id="N7J-DF-rCo"/>
+                            <constraint firstItem="bMb-4z-VLb" firstAttribute="centerY" secondItem="aX2-oU-qf3" secondAttribute="centerY" id="NW6-Py-7G9"/>
+                            <constraint firstItem="Re0-xa-Lz3" firstAttribute="bottom" secondItem="VUg-Po-DPf" secondAttribute="bottom" id="OAO-M5-4RV"/>
+                            <constraint firstItem="VUg-Po-DPf" firstAttribute="top" secondItem="aX2-oU-qf3" secondAttribute="top" id="Plf-JJ-ghW"/>
+                            <constraint firstItem="Re0-xa-Lz3" firstAttribute="trailing" secondItem="VUg-Po-DPf" secondAttribute="trailing" id="Qkf-5A-VJm"/>
+                            <constraint firstItem="vFm-Fd-M5Y" firstAttribute="centerX" secondItem="aX2-oU-qf3" secondAttribute="centerX" id="U8D-0v-7J3"/>
                             <constraint firstItem="bMb-4z-VLb" firstAttribute="centerX" secondItem="aX2-oU-qf3" secondAttribute="centerX" id="URx-YU-w3d"/>
-                            <constraint firstItem="OC6-iP-n3D" firstAttribute="top" secondItem="Re0-xa-Lz3" secondAttribute="top" constant="30" id="WXz-v8-eE6"/>
-                            <constraint firstItem="OC6-iP-n3D" firstAttribute="centerX" secondItem="aX2-oU-qf3" secondAttribute="centerX" id="Ym2-L6-q44"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="PanGesture" image="Pan" id="SN8-tq-nIp"/>
+                    <connections>
+                        <outlet property="imgPanImage" destination="vFm-Fd-M5Y" id="Rm9-B8-fW6"/>
+                        <outlet property="vwDragMe" destination="bMb-4z-VLb" id="O4C-Qg-Lsd"/>
+                        <outlet property="vwEffectBlur" destination="VUg-Po-DPf" id="S4O-Or-Q1M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szl-Dk-nOx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="-246"/>
+            <point key="canvasLocation" x="-254" y="-232"/>
+        </scene>
+        <!--SwipeGesture-->
+        <scene sceneID="fKw-Pf-jCj">
+            <objects>
+                <viewController storyboardIdentifier="SwipeGestureView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cnf-Gf-Bfw" customClass="SwipeGestureViewController" customModule="UIGestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vZ0-YN-gIm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYU-fW-eha">
+                                <rect key="frame" x="82" y="398" width="250" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swipe" translatesAutoresizingMaskIntoConstraints="NO" id="Vz5-FM-ekk">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Vz5-FM-ekk" secondAttribute="trailing" id="8Kw-p8-fEa"/>
+                                    <constraint firstAttribute="height" constant="100" id="MLn-Xi-9Wa"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vz5-FM-ekk" secondAttribute="bottom" id="TaX-V2-Qbp"/>
+                                    <constraint firstAttribute="width" constant="250" id="oH8-XN-cJW"/>
+                                    <constraint firstItem="Vz5-FM-ekk" firstAttribute="leading" secondItem="dYU-fW-eha" secondAttribute="leading" id="vS2-56-vhH"/>
+                                    <constraint firstItem="Vz5-FM-ekk" firstAttribute="top" secondItem="dYU-fW-eha" secondAttribute="top" id="yfv-gf-ZKT"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on image to show swipe modal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2b-KN-Ztc">
+                                <rect key="frame" x="50.5" y="339" width="313.5" height="29"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <color key="textColor" name="Theme-Green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBa-UL-yN5">
+                                <rect key="frame" x="124.5" y="74" width="165" height="36"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ket-JW-8uJ" userLabel="Vw Modal Overlay">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lR0-Qo-Tfo" userLabel="Vw modal">
+                                <rect key="frame" x="0.0" y="813" width="414" height="0.0"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe me up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs8-FD-QdP">
+                                        <rect key="frame" x="149" y="33" width="116" height="29"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-1a-ukF" userLabel="Line">
+                                        <rect key="frame" x="182" y="10" width="50" height="3"/>
+                                        <color key="backgroundColor" name="Theme-Gray"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="6Vp-fq-e0O"/>
+                                            <constraint firstAttribute="height" constant="3" id="ONb-Vl-DoX"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="1,5"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="Theme-SecondBackground"/>
+                                <constraints>
+                                    <constraint firstItem="ZcU-1a-ukF" firstAttribute="top" secondItem="lR0-Qo-Tfo" secondAttribute="top" constant="10" id="2Qv-of-ObT"/>
+                                    <constraint firstAttribute="height" id="HPm-Tx-cyW"/>
+                                    <constraint firstItem="ZcU-1a-ukF" firstAttribute="centerX" secondItem="lR0-Qo-Tfo" secondAttribute="centerX" id="rRN-bO-lfc"/>
+                                    <constraint firstItem="xs8-FD-QdP" firstAttribute="top" secondItem="ZcU-1a-ukF" secondAttribute="bottom" constant="20" id="sWw-fQ-JSz"/>
+                                    <constraint firstItem="xs8-FD-QdP" firstAttribute="centerX" secondItem="lR0-Qo-Tfo" secondAttribute="centerX" id="yTm-bX-MUp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BIu-JC-64V"/>
+                        <color key="backgroundColor" name="Theme-Background"/>
+                        <constraints>
+                            <constraint firstItem="ket-JW-8uJ" firstAttribute="leading" secondItem="BIu-JC-64V" secondAttribute="leading" id="8wQ-DE-byv"/>
+                            <constraint firstItem="ket-JW-8uJ" firstAttribute="top" secondItem="vZ0-YN-gIm" secondAttribute="top" id="9yG-hG-dIq"/>
+                            <constraint firstItem="BIu-JC-64V" firstAttribute="trailing" secondItem="ket-JW-8uJ" secondAttribute="trailing" id="BNC-8e-FGu"/>
+                            <constraint firstItem="uBa-UL-yN5" firstAttribute="top" secondItem="BIu-JC-64V" secondAttribute="top" constant="30" id="Bo7-wZ-02v"/>
+                            <constraint firstItem="A2b-KN-Ztc" firstAttribute="centerX" secondItem="vZ0-YN-gIm" secondAttribute="centerX" id="Ccj-uU-CSd"/>
+                            <constraint firstItem="lR0-Qo-Tfo" firstAttribute="leading" secondItem="BIu-JC-64V" secondAttribute="leading" id="IHT-PW-XLF"/>
+                            <constraint firstItem="BIu-JC-64V" firstAttribute="trailing" secondItem="lR0-Qo-Tfo" secondAttribute="trailing" id="Isg-QQ-Dt7"/>
+                            <constraint firstItem="dYU-fW-eha" firstAttribute="centerX" secondItem="vZ0-YN-gIm" secondAttribute="centerX" id="JGL-K5-nNV"/>
+                            <constraint firstItem="uBa-UL-yN5" firstAttribute="centerX" secondItem="vZ0-YN-gIm" secondAttribute="centerX" id="Ooh-sW-UFh"/>
+                            <constraint firstAttribute="bottom" secondItem="ket-JW-8uJ" secondAttribute="bottom" id="kdB-3y-RG5"/>
+                            <constraint firstItem="dYU-fW-eha" firstAttribute="centerY" secondItem="vZ0-YN-gIm" secondAttribute="centerY" id="oBt-4u-ZHd"/>
+                            <constraint firstItem="dYU-fW-eha" firstAttribute="top" secondItem="A2b-KN-Ztc" secondAttribute="bottom" constant="30" id="x7K-SU-Ucm"/>
+                            <constraint firstItem="BIu-JC-64V" firstAttribute="bottom" secondItem="lR0-Qo-Tfo" secondAttribute="bottom" id="xgf-SS-IgI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SwipeGesture" image="Icon-Swipe" id="zGB-T1-1F5"/>
+                    <connections>
+                        <outlet property="lblSwipeMe" destination="xs8-FD-QdP" id="EOT-r3-1hg"/>
+                        <outlet property="vwModal" destination="lR0-Qo-Tfo" id="uJd-sx-oWT"/>
+                        <outlet property="vwModalHeightConstraint" destination="HPm-Tx-cyW" id="dHU-en-nkr"/>
+                        <outlet property="vwModalOverlay" destination="ket-JW-8uJ" id="dSY-wZ-NMB"/>
+                        <outlet property="vwShowModal" destination="dYU-fW-eha" id="U3X-Nd-fRy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7V5-eh-5Jd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692.75362318840587" y="-232.36607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jdJ-bk-Mzx">
+            <objects>
+                <viewController id="Grc-Gr-5hM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="21N-7L-pye">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zM2-vj-B9g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mgn-BP-Akh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="-243"/>
         </scene>
         <!--TapGesture-->
         <scene sceneID="ZZy-9P-oIJ">
@@ -192,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yac-Lw-GyT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1058" y="-246"/>
+            <point key="canvasLocation" x="-1149" y="-232"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="s4Y-QH-a6O">
@@ -209,6 +360,7 @@
                     <connections>
                         <segue destination="NTt-Jy-0DK" kind="relationship" relationship="viewControllers" id="cPA-Sy-O64"/>
                         <segue destination="mmq-Dk-s5z" kind="relationship" relationship="viewControllers" id="F7n-7z-pUD"/>
+                        <segue destination="Cnf-Gf-Bfw" kind="relationship" relationship="viewControllers" id="sYV-FH-3Tn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxG-0r-t5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -217,10 +369,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icon-Swipe" width="21.333333969116211" height="21.333333969116211"/>
         <image name="Pan" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="Pan-Image" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="Swipe" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Tap" width="21.333333969116211" height="21.333333969116211"/>
         <namedColor name="Theme-Background">
-            <color red="0.10980392156862745" green="0.12549019607843137" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10999999940395355" green="0.125" blue="0.16099999845027924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Theme-Gray">
+            <color red="0.51764705882352946" green="0.5607843137254902" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Theme-Green">
             <color red="0.30980392156862746" green="0.71372549019607845" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -228,5 +386,8 @@
         <namedColor name="Theme-SecondBackground">
             <color red="0.14117647058823529" green="0.15686274509803921" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
