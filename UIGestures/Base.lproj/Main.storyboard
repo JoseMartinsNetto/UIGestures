@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -197,20 +196,103 @@
             </objects>
             <point key="canvasLocation" x="692.75362318840587" y="-232.36607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--EdgePanGesture-->
         <scene sceneID="jdJ-bk-Mzx">
             <objects>
-                <viewController id="Grc-Gr-5hM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EdgePanGestureView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Grc-Gr-5hM" customClass="EdgePanGestureViewController" customModule="UIGestures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="21N-7L-pye">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JN6-ua-aA8">
+                                <rect key="frame" x="414" y="363" width="0.0" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRk-nj-F9H">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="170"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <state key="normal" title="Close me">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeRightBadge:" destination="Grc-Gr-5hM" eventType="touchUpInside" id="T5K-v4-FYa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Theme-SecondBackground"/>
+                                <constraints>
+                                    <constraint firstItem="WRk-nj-F9H" firstAttribute="leading" secondItem="JN6-ua-aA8" secondAttribute="leading" id="0pc-ko-5Ht"/>
+                                    <constraint firstAttribute="trailing" secondItem="WRk-nj-F9H" secondAttribute="trailing" id="HTP-ax-4g3"/>
+                                    <constraint firstAttribute="bottom" secondItem="WRk-nj-F9H" secondAttribute="bottom" id="NhO-Xx-Cad"/>
+                                    <constraint firstAttribute="width" id="j8M-28-gAq"/>
+                                    <constraint firstAttribute="height" constant="170" id="jrK-EM-vo2"/>
+                                    <constraint firstItem="WRk-nj-F9H" firstAttribute="top" secondItem="JN6-ua-aA8" secondAttribute="top" id="kIe-xo-kHT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1N-eW-a1f">
+                                <rect key="frame" x="103" y="74" width="208" height="49"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="26"/>
+                                <state key="normal" title="Edge Pan Gesture">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe from de edges to show the badges" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sE-eX-1yY">
+                                <rect key="frame" x="82" y="419.5" width="250" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="PAg-fP-6t6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <color key="textColor" name="Theme-Green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azb-cf-eza">
+                                <rect key="frame" x="0.0" y="363" width="0.0" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoW-vN-5cT">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="170"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <state key="normal" title="Close me">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeLeftBadge:" destination="Grc-Gr-5hM" eventType="touchUpInside" id="gU6-e8-S4v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Theme-SecondBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XoW-vN-5cT" secondAttribute="trailing" id="9zF-Wn-YAb"/>
+                                    <constraint firstItem="XoW-vN-5cT" firstAttribute="leading" secondItem="azb-cf-eza" secondAttribute="leading" id="EAx-py-DVO"/>
+                                    <constraint firstAttribute="height" constant="170" id="LHW-pC-HB4"/>
+                                    <constraint firstItem="XoW-vN-5cT" firstAttribute="top" secondItem="azb-cf-eza" secondAttribute="top" id="QiY-4S-bmB"/>
+                                    <constraint firstAttribute="bottom" secondItem="XoW-vN-5cT" secondAttribute="bottom" id="Rty-h1-RGT"/>
+                                    <constraint firstAttribute="width" id="qXk-BZ-k2O"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zM2-vj-B9g"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Theme-Background"/>
+                        <constraints>
+                            <constraint firstItem="JN6-ua-aA8" firstAttribute="trailing" secondItem="zM2-vj-B9g" secondAttribute="trailing" id="27U-Nn-hMR"/>
+                            <constraint firstItem="V1N-eW-a1f" firstAttribute="top" secondItem="zM2-vj-B9g" secondAttribute="top" constant="30" id="8Al-LA-p7s"/>
+                            <constraint firstItem="2sE-eX-1yY" firstAttribute="centerX" secondItem="21N-7L-pye" secondAttribute="centerX" id="8Am-ar-M2j"/>
+                            <constraint firstItem="2sE-eX-1yY" firstAttribute="centerY" secondItem="21N-7L-pye" secondAttribute="centerY" id="TXh-59-Hpz"/>
+                            <constraint firstItem="azb-cf-eza" firstAttribute="leading" secondItem="zM2-vj-B9g" secondAttribute="leading" id="Tsz-fK-Se0"/>
+                            <constraint firstItem="azb-cf-eza" firstAttribute="centerY" secondItem="21N-7L-pye" secondAttribute="centerY" id="cX1-kb-V9s"/>
+                            <constraint firstItem="V1N-eW-a1f" firstAttribute="centerX" secondItem="21N-7L-pye" secondAttribute="centerX" id="hzd-NQ-Fsu"/>
+                            <constraint firstItem="JN6-ua-aA8" firstAttribute="centerY" secondItem="21N-7L-pye" secondAttribute="centerY" id="qpo-qv-xiI"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="EdgePanGesture" image="Pan" id="Igp-kZ-HcA"/>
+                    <connections>
+                        <outlet property="vwLeftEdgeBadge" destination="azb-cf-eza" id="rih-n6-cvI"/>
+                        <outlet property="vwLeftEdgeBadgeWidthConstrait" destination="qXk-BZ-k2O" id="zwe-bi-fcq"/>
+                        <outlet property="vwRightEdgeBadge" destination="JN6-ua-aA8" id="HMf-FL-ZMj"/>
+                        <outlet property="vwRightEdgeBadgeWidthConstrait" destination="j8M-28-gAq" id="2JC-8u-9tg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgn-BP-Akh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="-243"/>
+            <point key="canvasLocation" x="1594" y="-232"/>
         </scene>
         <!--TapGesture-->
         <scene sceneID="ZZy-9P-oIJ">
@@ -361,11 +443,12 @@
                         <segue destination="NTt-Jy-0DK" kind="relationship" relationship="viewControllers" id="cPA-Sy-O64"/>
                         <segue destination="mmq-Dk-s5z" kind="relationship" relationship="viewControllers" id="F7n-7z-pUD"/>
                         <segue destination="Cnf-Gf-Bfw" kind="relationship" relationship="viewControllers" id="sYV-FH-3Tn"/>
+                        <segue destination="Grc-Gr-5hM" kind="relationship" relationship="viewControllers" id="Hz4-ku-T4z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxG-0r-t5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-728" y="-960"/>
+            <point key="canvasLocation" x="45" y="-1033"/>
         </scene>
     </scenes>
     <resources>
@@ -386,8 +469,5 @@
         <namedColor name="Theme-SecondBackground">
             <color red="0.14117647058823529" green="0.15686274509803921" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
