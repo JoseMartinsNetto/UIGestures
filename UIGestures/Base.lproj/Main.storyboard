@@ -405,7 +405,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0F-xt-SeF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3520" y="-232"/>
+            <point key="canvasLocation" x="3518.840579710145" y="-232.36607142857142"/>
+        </scene>
+        <!--LongPressGesture-->
+        <scene sceneID="MsV-3B-bfu">
+            <objects>
+                <viewController storyboardIdentifier="LongPressGestureView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RAQ-z8-CaU" customClass="LongPressGestureViewController" customModule="UIGestures" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cNj-nR-6tQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LongPress Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwK-7d-ttC">
+                                <rect key="frame" x="102" y="74" width="210" height="36"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCS-9j-YAS">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Press Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFY-yL-K0h">
+                                        <rect key="frame" x="54" y="105.5" width="132" height="29"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                        <color key="textColor" red="0.10980392160000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="fFY-yL-K0h" firstAttribute="centerY" secondItem="mCS-9j-YAS" secondAttribute="centerY" id="5R4-B8-5CK"/>
+                                    <constraint firstAttribute="width" constant="240" id="Okt-so-4bj"/>
+                                    <constraint firstAttribute="height" constant="240" id="W2g-FB-LXR"/>
+                                    <constraint firstItem="fFY-yL-K0h" firstAttribute="centerX" secondItem="mCS-9j-YAS" secondAttribute="centerX" id="WnL-d4-7gw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AI6-7w-gfe">
+                                <rect key="frame" x="414" y="130" width="0.0" height="159"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZO-r7-D6L">
+                                        <rect key="frame" x="-21" y="67" width="42" height="25"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Theme-SecondBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="E67-VF-u9a"/>
+                                    <constraint firstAttribute="width" id="NMD-GM-u3J"/>
+                                    <constraint firstItem="KZO-r7-D6L" firstAttribute="centerX" secondItem="AI6-7w-gfe" secondAttribute="centerX" id="SF1-WU-GPC"/>
+                                    <constraint firstItem="KZO-r7-D6L" firstAttribute="centerY" secondItem="AI6-7w-gfe" secondAttribute="centerY" id="jXg-MQ-B3J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PdD-6g-PrT"/>
+                        <color key="backgroundColor" name="Theme-Background"/>
+                        <constraints>
+                            <constraint firstItem="mCS-9j-YAS" firstAttribute="centerY" secondItem="cNj-nR-6tQ" secondAttribute="centerY" id="8aA-ZH-8Tl"/>
+                            <constraint firstItem="AI6-7w-gfe" firstAttribute="top" secondItem="wwK-7d-ttC" secondAttribute="bottom" constant="20" id="Gcy-7L-wwg"/>
+                            <constraint firstItem="mCS-9j-YAS" firstAttribute="centerX" secondItem="cNj-nR-6tQ" secondAttribute="centerX" id="LAS-2b-6QE"/>
+                            <constraint firstItem="wwK-7d-ttC" firstAttribute="top" secondItem="PdD-6g-PrT" secondAttribute="top" constant="30" id="TT4-4V-l05"/>
+                            <constraint firstItem="AI6-7w-gfe" firstAttribute="trailing" secondItem="PdD-6g-PrT" secondAttribute="trailing" id="W2Z-IZ-j1F"/>
+                            <constraint firstItem="wwK-7d-ttC" firstAttribute="centerX" secondItem="cNj-nR-6tQ" secondAttribute="centerX" id="wDl-rz-oEA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="LongPressGesture" image="Tap" id="v6g-ga-0wC"/>
+                    <connections>
+                        <outlet property="vwBadge" destination="AI6-7w-gfe" id="lZg-7o-Kh4"/>
+                        <outlet property="vwBadgeWidthConstraint" destination="NMD-GM-u3J" id="NbG-qb-0HH"/>
+                        <outlet property="vwLongPressHeightConstraint" destination="W2g-FB-LXR" id="c6Q-aN-hhJ"/>
+                        <outlet property="vwLongPressView" destination="mCS-9j-YAS" id="CJ0-T5-dR0"/>
+                        <outlet property="vwLongPressWidthConstraint" destination="Okt-so-4bj" id="bog-7I-KST"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZR-N3-CXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4419" y="-232"/>
         </scene>
         <!--TapGesture-->
         <scene sceneID="ZZy-9P-oIJ">
@@ -559,6 +639,7 @@
                         <segue destination="Grc-Gr-5hM" kind="relationship" relationship="viewControllers" id="Hz4-ku-T4z"/>
                         <segue destination="UQS-Av-9XJ" kind="relationship" relationship="viewControllers" id="Wzg-V8-IFN"/>
                         <segue destination="ycf-e0-Xvt" kind="relationship" relationship="viewControllers" id="wus-og-Bzc"/>
+                        <segue destination="RAQ-z8-CaU" kind="relationship" relationship="viewControllers" id="2Hh-Ge-7Xp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxG-0r-t5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
