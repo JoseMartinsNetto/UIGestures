@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -294,6 +295,62 @@
             </objects>
             <point key="canvasLocation" x="1594" y="-232"/>
         </scene>
+        <!--PinchGesture-->
+        <scene sceneID="ZUA-FO-SnE">
+            <objects>
+                <viewController storyboardIdentifier="PinchGestureView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UQS-Av-9XJ" customClass="PinchGestureViewController" customModule="UIGestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dl4-Xw-ZJb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinch Gesture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tma-Fb-fVU">
+                                <rect key="frame" x="128" y="74" width="158" height="36"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JC6-Sd-Rwx">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinch Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLA-ct-xyh">
+                                        <rect key="frame" x="78.5" y="105.5" width="83" height="29"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                        <color key="textColor" red="0.10980392160000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="BLA-ct-xyh" firstAttribute="centerY" secondItem="JC6-Sd-Rwx" secondAttribute="centerY" id="Pj4-6C-O26"/>
+                                    <constraint firstAttribute="height" constant="240" id="Z57-kq-p1b"/>
+                                    <constraint firstItem="BLA-ct-xyh" firstAttribute="centerX" secondItem="JC6-Sd-Rwx" secondAttribute="centerX" id="Z8Q-e2-jKZ"/>
+                                    <constraint firstAttribute="width" constant="240" id="dLq-Zo-bgd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XXk-M6-mI7"/>
+                        <color key="backgroundColor" red="0.10980392160000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JC6-Sd-Rwx" firstAttribute="centerX" secondItem="dl4-Xw-ZJb" secondAttribute="centerX" id="WeW-C8-02G"/>
+                            <constraint firstItem="tma-Fb-fVU" firstAttribute="top" secondItem="XXk-M6-mI7" secondAttribute="top" constant="30" id="e5c-U1-qLt"/>
+                            <constraint firstItem="JC6-Sd-Rwx" firstAttribute="centerY" secondItem="dl4-Xw-ZJb" secondAttribute="centerY" id="kIo-q3-Xyr"/>
+                            <constraint firstItem="tma-Fb-fVU" firstAttribute="centerX" secondItem="dl4-Xw-ZJb" secondAttribute="centerX" id="pUs-te-0p9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="PinchGesture" image="Pinch" id="Fo5-Ga-sSj"/>
+                    <connections>
+                        <outlet property="vwPinchMe" destination="JC6-Sd-Rwx" id="2K0-RM-3xq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MzD-Nu-WPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2570" y="-232"/>
+        </scene>
         <!--TapGesture-->
         <scene sceneID="ZZy-9P-oIJ">
             <objects>
@@ -444,17 +501,19 @@
                         <segue destination="mmq-Dk-s5z" kind="relationship" relationship="viewControllers" id="F7n-7z-pUD"/>
                         <segue destination="Cnf-Gf-Bfw" kind="relationship" relationship="viewControllers" id="sYV-FH-3Tn"/>
                         <segue destination="Grc-Gr-5hM" kind="relationship" relationship="viewControllers" id="Hz4-ku-T4z"/>
+                        <segue destination="UQS-Av-9XJ" kind="relationship" relationship="viewControllers" id="Wzg-V8-IFN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxG-0r-t5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45" y="-1033"/>
+            <point key="canvasLocation" x="455" y="-1030"/>
         </scene>
     </scenes>
     <resources>
         <image name="Icon-Swipe" width="21.333333969116211" height="21.333333969116211"/>
         <image name="Pan" width="21.333333969116211" height="21.333333969116211"/>
         <image name="Pan-Image" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="Pinch" width="21.333333969116211" height="21.333333969116211"/>
         <image name="Swipe" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Tap" width="21.333333969116211" height="21.333333969116211"/>
         <namedColor name="Theme-Background">
@@ -469,5 +528,8 @@
         <namedColor name="Theme-SecondBackground">
             <color red="0.14117647058823529" green="0.15686274509803921" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
