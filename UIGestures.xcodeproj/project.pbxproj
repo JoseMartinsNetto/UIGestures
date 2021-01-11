@@ -12,6 +12,7 @@
 		82A4723025AB8EC300A9AA34 /* PinchGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A4722F25AB8EC300A9AA34 /* PinchGestureViewController.swift */; };
 		82A4723525AB947D00A9AA34 /* RotationGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A4723425AB947D00A9AA34 /* RotationGestureViewController.swift */; };
 		82A4723A25AB9A3200A9AA34 /* LongPressGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A4723925AB9A3200A9AA34 /* LongPressGestureViewController.swift */; };
+		82A4723F25AC067A00A9AA34 /* MultipleGesturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A4723E25AC067A00A9AA34 /* MultipleGesturesViewController.swift */; };
 		82B0E8F725AA3E8600B4EFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E8F625AA3E8600B4EFBC /* AppDelegate.swift */; };
 		82B0E8F925AA3E8600B4EFBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B0E8F825AA3E8600B4EFBC /* SceneDelegate.swift */; };
 		82B0E8FE25AA3E8600B4EFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B0E8FC25AA3E8600B4EFBC /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		82A4722F25AB8EC300A9AA34 /* PinchGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchGestureViewController.swift; sourceTree = "<group>"; };
 		82A4723425AB947D00A9AA34 /* RotationGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureViewController.swift; sourceTree = "<group>"; };
 		82A4723925AB9A3200A9AA34 /* LongPressGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureViewController.swift; sourceTree = "<group>"; };
+		82A4723E25AC067A00A9AA34 /* MultipleGesturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleGesturesViewController.swift; sourceTree = "<group>"; };
 		82B0E8F325AA3E8600B4EFBC /* UIGestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIGestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B0E8F625AA3E8600B4EFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B0E8F825AA3E8600B4EFBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				82A4722F25AB8EC300A9AA34 /* PinchGestureViewController.swift */,
 				82A4723425AB947D00A9AA34 /* RotationGestureViewController.swift */,
 				82A4723925AB9A3200A9AA34 /* LongPressGestureViewController.swift */,
+				82A4723E25AC067A00A9AA34 /* MultipleGesturesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A4723F25AC067A00A9AA34 /* MultipleGesturesViewController.swift in Sources */,
 				82A4722B25AB6D6500A9AA34 /* EdgePanGestureViewController.swift in Sources */,
 				82A4722625AB554400A9AA34 /* SwipeGestureViewController.swift in Sources */,
 				82B0E94C25AA525000B4EFBC /* Extensions.swift in Sources */,
