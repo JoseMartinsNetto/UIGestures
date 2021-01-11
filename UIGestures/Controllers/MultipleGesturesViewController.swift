@@ -23,25 +23,26 @@ class MultipleGesturesViewController: UIViewController, UIGestureRecognizerDeleg
     //-----------------------------------------------------------------------
     
     
-    //    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-    //        return true
-    //    }
+//        func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+//            return true
+//        }
     //
-    //    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-    //        return true
-    //    }
+//        func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+//            gestureRecognizer.view == touch.view
+//            return true
+//        }
+//
+//        func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive press: UIPress) -> Bool {
+//            return true
+//        }
+//
+//        func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive event: UIEvent) -> Bool {
+//            return true
+//        }
     //
-    //    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive press: UIPress) -> Bool {
-    //        return true
-    //    }
-    //
-    //    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive event: UIEvent) -> Bool {
-    //        return true
-    //    }
-    //
-    //    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-    //        return true
-    //    }
+//        func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+//            return true
+//        }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         
@@ -57,10 +58,10 @@ class MultipleGesturesViewController: UIViewController, UIGestureRecognizerDeleg
         
         // If either gesture recognizer is a long press, do not allow simultaneous recognition.
         
-//        if !(gestureRecognizer is UIRotationGestureRecognizer) || !(gestureRecognizer is UIPinchGestureRecognizer)
-//        || !(otherGestureRecognizer is UIRotationGestureRecognizer) || !(otherGestureRecognizer is UIPinchGestureRecognizer){
-//            return false
-//        }
+        if !(gestureRecognizer is UIRotationGestureRecognizer) || !(gestureRecognizer is UIPinchGestureRecognizer)
+        || !(otherGestureRecognizer is UIRotationGestureRecognizer) || !(otherGestureRecognizer is UIPinchGestureRecognizer){
+            return false
+        }
         
         
         

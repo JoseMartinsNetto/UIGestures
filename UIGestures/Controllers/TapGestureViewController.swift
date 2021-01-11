@@ -43,10 +43,10 @@ class TapGestureViewController: UIViewController {
         vwModalOverlay.addGestureRecognizer(tapOnModalOverlayGestureRecognizer)
         
         let tapOnCardGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOnCard))
-        //        tapOnCardGestureRecognizer.cancelsTouchesInView = touchesBegan, touchesEnded
-        //        tapOnCardGestureRecognizer.buttonMaskRequired = .primary .secondary
-        //        tapOnCardGestureRecognizer.numberOfTouchesRequired = 1, 2 ... fingers
-        //        tapOnCardGestureRecognizer.numberOfTapsRequired = 1, 2 ... taps
+//                tapOnCardGestureRecognizer.cancelsTouchesInView = touchesBegan, touchesEnded
+//                tapOnCardGestureRecognizer.buttonMaskRequired = .primary .secondary
+//                tapOnCardGestureRecognizer.numberOfTouchesRequired = 1, 2 ... fingers
+//                tapOnCardGestureRecognizer.numberOfTapsRequired = 1, 2 ... taps
         
         vwTapMe.addGestureRecognizer(tapOnCardGestureRecognizer)
         
