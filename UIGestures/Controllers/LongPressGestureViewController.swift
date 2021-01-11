@@ -7,7 +7,9 @@
 
 import UIKit
 
-class LongPressGestureViewController: UIViewController {
+class LongPressGestureViewController: UIViewController
+//                                      ,UIGestureRecognizerDelegate
+{
     @IBOutlet var vwLongPressView: UIView!
     @IBOutlet var vwBadge: UIView!
     
