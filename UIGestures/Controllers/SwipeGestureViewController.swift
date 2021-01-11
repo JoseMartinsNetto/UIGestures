@@ -34,19 +34,15 @@ class SwipeGestureViewController: UIViewController {
     func configGestures() {
         let swipeDownOnModalRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleDownSwipeOnModal))
         swipeDownOnModalRecognizer.direction = .down
+//        swipeDownOnModalRecognizer.numberOfTouchesRequired = 1,2 .. fingers
+        vwModal.addGestureRecognizer(swipeDownOnModalRecognizer)
         
         let swipeUpOnModalRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleUpSwipeOnModal))
         swipeUpOnModalRecognizer.direction = .up
-        
-        vwModal.addGestureRecognizer(swipeDownOnModalRecognizer)
         vwModal.addGestureRecognizer(swipeUpOnModalRecognizer)
-        
-        let tapOnShowModalImage = UITapGestureRecognizer(target: self, action: #selector(showModal))
-        
-        vwShowModal.addGestureRecognizer(tapOnShowModalImage)
     }
     
-    @objc func showModal(_ sender: UITapGestureRecognizer) {
+   @IBAction func showModal(_ sender: UITapGestureRecognizer) {
         UIView.animate(
             withDuration: 0.9,
             delay: 0,

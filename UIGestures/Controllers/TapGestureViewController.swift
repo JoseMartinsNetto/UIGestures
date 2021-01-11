@@ -40,13 +40,16 @@ class TapGestureViewController: UIViewController {
     
     func setupGestures() {
         let tapOnModalOverlayGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(handleTapOnModalOverlay))
-        tapOnModalOverlayGestureRecognizer.cancelsTouchesInView = false
+        vwModalOverlay.addGestureRecognizer(tapOnModalOverlayGestureRecognizer)
         
         let tapOnCardGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOnCard))
-        tapOnCardGestureRecognizer.cancelsTouchesInView = false
+        //        tapOnCardGestureRecognizer.cancelsTouchesInView = touchesBegan, touchesEnded
+        //        tapOnCardGestureRecognizer.buttonMaskRequired = .primary .secondary
+        //        tapOnCardGestureRecognizer.numberOfTouchesRequired = 1, 2 ... fingers
+        //        tapOnCardGestureRecognizer.numberOfTapsRequired = 1, 2 ... taps
         
         vwTapMe.addGestureRecognizer(tapOnCardGestureRecognizer)
-        vwModalOverlay.addGestureRecognizer(tapOnModalOverlayGestureRecognizer)
+        
     }
     
     func configUI() {

@@ -7,9 +7,7 @@
 
 import UIKit
 
-class LongPressGestureViewController: UIViewController
-//                                      ,UIGestureRecognizerDelegate
-{
+class LongPressGestureViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var vwLongPressView: UIView!
     @IBOutlet var vwBadge: UIView!
     
@@ -35,8 +33,10 @@ class LongPressGestureViewController: UIViewController
     
     func configureGestures() {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
-        
-        longPressGesture.minimumPressDuration = 0.3
+//        longPressGesture.minimumPressDuration = 0.5
+//        longPressGesture.allowableMovement = 10
+//        longPressGesture.numberOfTapsRequired = 1
+//        longPressGesture.numberOfTouchesRequired = 1
         vwLongPressView.addGestureRecognizer(longPressGesture)
         
         let tapOnBadgeGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -77,4 +77,10 @@ class LongPressGestureViewController: UIViewController
             self.view.layoutIfNeeded()
         }
     }
+    
+    //-----------------------------------------------------------------------
+    //    MARK: - UIGestureRecognizerDelegate
+    //-----------------------------------------------------------------------
+    
+    
 }

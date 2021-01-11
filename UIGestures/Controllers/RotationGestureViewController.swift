@@ -24,7 +24,6 @@ class RotationGestureViewController: UIViewController {
     
     func configGestures() {
         let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotationGesture))
-        
         vwRotateMe.addGestureRecognizer(rotationGesture)
     }
     
@@ -34,6 +33,8 @@ class RotationGestureViewController: UIViewController {
             
             view.transform = view.transform.rotated(by: sender.rotation)
             sender.rotation = 0
+            
+//            sender.velocity
             
             if sender.state == .ended {
                 UIView.animate(withDuration: 0.3) {

@@ -38,11 +38,9 @@ class PanGestureViewController: UIViewController {
     
     func configGestures() {
         let panGestureOnDragMe = UIPanGestureRecognizer(target: self, action: #selector(handlePanGestureOnDragMe))
-        panGestureOnDragMe.cancelsTouchesInView = false
         vwDragMe.addGestureRecognizer(panGestureOnDragMe)
         
         let panGestureOnPanImage = UIPanGestureRecognizer(target: self, action: #selector(handlePanGestureOnPanImage))
-        panGestureOnPanImage.cancelsTouchesInView = false
         imgPanImage.addGestureRecognizer(panGestureOnPanImage)
         
         originalPanImageCenter = CGPoint(x: imgPanImage.center.x, y: imgPanImage.center.y)

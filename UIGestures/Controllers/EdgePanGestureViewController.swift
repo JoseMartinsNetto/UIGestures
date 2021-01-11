@@ -34,11 +34,10 @@ class EdgePanGestureViewController: UIViewController {
     func configGestures() {
         let edgePanLeft = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(screenEdgeSwiped))
         edgePanLeft.edges = .left
+        view.addGestureRecognizer(edgePanLeft)
         
         let edgePanRight = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(screenEdgeSwiped))
         edgePanRight.edges = .right
-        
-        view.addGestureRecognizer(edgePanLeft)
         view.addGestureRecognizer(edgePanRight)
     }
     

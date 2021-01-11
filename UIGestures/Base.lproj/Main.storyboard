@@ -110,6 +110,7 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES"/>
                                 </accessibility>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Vz5-FM-ekk" secondAttribute="trailing" id="8Kw-p8-fEa"/>
                                     <constraint firstAttribute="height" constant="100" id="MLn-Xi-9Wa"/>
@@ -118,6 +119,9 @@
                                     <constraint firstItem="Vz5-FM-ekk" firstAttribute="leading" secondItem="dYU-fW-eha" secondAttribute="leading" id="vS2-56-vhH"/>
                                     <constraint firstItem="Vz5-FM-ekk" firstAttribute="top" secondItem="dYU-fW-eha" secondAttribute="top" id="yfv-gf-ZKT"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0hO-Eb-bBb" appends="YES" id="s1M-xV-uhs"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on image to show swipe modal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2b-KN-Ztc">
                                 <rect key="frame" x="50.5" y="339" width="313.5" height="29"/>
@@ -194,6 +198,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7V5-eh-5Jd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0hO-Eb-bBb">
+                    <connections>
+                        <action selector="showModal:" destination="Cnf-Gf-Bfw" id="3D1-Zf-IQK"/>
+                        <outlet property="delegate" destination="dYU-fW-eha" id="RxU-3d-l7d"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="692.75362318840587" y="-232.36607142857142"/>
         </scene>
@@ -539,6 +549,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="qqz-vW-5cu" firstAttribute="centerY" secondItem="Ihg-A7-qBZ" secondAttribute="centerY" id="Ql7-aV-7d8"/>
                                     <constraint firstAttribute="height" constant="250" id="cp9-oY-Fkh"/>
